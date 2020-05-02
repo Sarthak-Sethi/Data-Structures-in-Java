@@ -4,19 +4,17 @@
  */
 package StringsHackerank;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author sarthak sethi
  */
 public class test {
     public static void main(String[] args) {
-     ArrayList<Integer> a = new ArrayList<>();
-     String s ="sar";
-        System.out.println(s.substring(0, 4));
-
-
-        
+        System.out.println(7/2);
+        String s = "quyjjyq";
+          StringBuffer sb = new StringBuffer(s.substring(s.length()/2+1));
+              StringBuffer r= sb.reverse();
+              String rev = r.toString();
+              System.out.println(rev);
     }
 }
