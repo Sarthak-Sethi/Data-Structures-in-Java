@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 package ProblemSolving;
-
+// has some bugs
 public class BiggerisGreater {
     public static void main(String[] args) {
         String s = "dkhc";
