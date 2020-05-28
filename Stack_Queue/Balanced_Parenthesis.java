@@ -8,6 +8,7 @@ import java.util.Scanner;
 import java.util.Stack;
 
 /**
+bro its very very easy
  *
  * @author sarthak sethi
  */
