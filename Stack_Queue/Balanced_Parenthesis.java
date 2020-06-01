@@ -1,5 +1,5 @@
 /*
- * To change this template, choose Tools 
+ * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
 package Stack_Queue;
@@ -8,14 +8,12 @@ import java.util.Scanner;
 import java.util.Stack;
 
 /**
-bro its very very easy
  *
  * @author sarthak sethi
  */
 public class Balanced_Parenthesis {
     public static boolean checkBalanced(String s) {
 		// Write your code here
-
         Stack<Character> stack = new Stack<>();
         boolean ans = true;
         int i =0;
@@ -27,8 +25,11 @@ public class Balanced_Parenthesis {
             i++;
         }
         else if(s.charAt(i) == '}')
-        {    if(stack.size()==0) {
-            ans = false;break; }
+        {   
+            if(stack.size()==0) {
+            ans = false;
+            break; 
+        }
             if(stack.peek() == '{') {
                 stack.pop();
                 i++;
