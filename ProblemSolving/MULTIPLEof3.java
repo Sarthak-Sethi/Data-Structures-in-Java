@@ -47,6 +47,8 @@ public class MULTIPLEof3 {
         BigDecimal b1 = new BigDecimal(sum);
         BigDecimal ans = b1.remainder(new BigDecimal("3"));
            System.out.println(ans);
+        // if ans== 0 mtlb remainder 0 so divisible else not 
+        // also change int size to big integer for more accuracy
        }
     }
     
