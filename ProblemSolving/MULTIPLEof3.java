@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class MULTIPLEof3 {
     public static void main(String[] args) {
         Scanner s= new Scanner(System.in);
-        int size = s.nextInt();
+        int size = s.nextInt(); // change this int size to BigDecimal input rest is perfectly fine
         int n1 = s.nextInt();
         int n2 = s.nextInt();
         int i=2;
