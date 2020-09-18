@@ -26,11 +26,9 @@ public class Matrix {
         Stack<Integer> s = new Stack<>();
         for(int i=0;i<n;i++)
             s.push(arr[i]);
-        int[][] ans = new int[n][n];
-        
+        int[][] ans = new int[n][n];       
         for(int i=0;i<n;i++){
             ans[0][i] = arr[k];  
-       //     System.out.println(ans[i][0]+" value stored  ");
             k++;
         }
         for(int i=1;i<n;i++){

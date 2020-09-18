@@ -1,4 +1,7 @@
-
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package ProblemSolving;
 import java.math.BigDecimal;
 import java.util.Scanner;
@@ -9,7 +12,7 @@ import java.util.Scanner;
 public class MULTIPLEof3 {
     public static void main(String[] args) {
         Scanner s= new Scanner(System.in);
-        int size = s.nextInt(); // change this int size to BigDecimal input rest is perfectly fine
+        int size = s.nextInt();
         int n1 = s.nextInt();
         int n2 = s.nextInt();
         int i=2;
@@ -47,8 +50,6 @@ public class MULTIPLEof3 {
         BigDecimal b1 = new BigDecimal(sum);
         BigDecimal ans = b1.remainder(new BigDecimal("3"));
            System.out.println(ans);
-        // if ans== 0 mtlb remainder 0 so divisible else not 
-        // also change int size to big integer for more accuracy
        }
     }
     

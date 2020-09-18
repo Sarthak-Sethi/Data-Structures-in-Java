@@ -14,7 +14,7 @@ public class timeinwords {
     static String timeInWords(int h, int m) {
       String ans="";
       if(m==00){
-          return getword(h)+ "o' clock";
+          return getword(h)+ " o' clock";
       }if(m==15){
             return "quarter past "+getword(h);
         }
@@ -53,7 +53,7 @@ public class timeinwords {
             else{ // the 
                 m=60-m;
                 if(m==00){
-          return getword(h+1)+ "o' clock";
+          return getword(h+1)+ " o' clock";
       }if(m==15){
             return "quarter to "+getword(h+1);
         }
@@ -61,7 +61,11 @@ public class timeinwords {
           return "twenty minutes to "+getword(h+1);
       }
         if(m<30){
-            String minutes = 0+String.valueOf(m);
+            String minutes="";
+            if(m<10)
+            minutes = 0+String.valueOf(m);
+            else
+                minutes = String.valueOf(m);;
             System.out.println(m);
         if(minutes.charAt(0)=='0'){
             ans+=getword(Integer.parseInt(String.valueOf(minutes.charAt(1))));

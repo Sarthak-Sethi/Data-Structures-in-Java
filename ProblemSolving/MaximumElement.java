@@ -7,46 +7,53 @@ package ProblemSolving;
 import java.util.Scanner;
 import java.util.Stack;
 
-/**
- *
- * @author sarthak sethi
+/*
+ * author sarthak sethi
  */
 public class MaximumElement {
-    public static void main(String[] args) {
-    Stack<Integer> stack = new Stack<>();
-    int n;
-    Scanner s = new Scanner(System.in);
-    n = s.nextInt();
-    
-    for(int i=0;i<n;i++){
-        int no;
-        no = s.nextInt();
-        switch(no){
-            case 1 :
-            int input;
-            input = s.nextInt();
-            stack.push(input);
-                break;
-            case 2:
-            stack.pop();
-                break;
-            case 3:
-            if(stack.size()==1) {
-            System.out.println(stack.pop());
-            break;
-            }
-            else{
-                int max=0;
-            while(stack.size()>=2){
-                max = stack.pop();
-                if(stack.peek()>max){
-                   max = stack.pop(); 
-                }
-            }
-            System.out.println(max);
-             break;
-            }
-        }
-    }
-    }
+  public static Stack<Integer> maxValues = new Stack<>();
+    public static Stack<Integer> s2 = new Stack<>();
+	    
+	    public static Integer max(){
+	        if (maxValues.isEmpty()){
+	            return Integer.MIN_VALUE;
+	        }
+	        else{
+	            return maxValues.peek();
+	         }
+	    }
+	    
+	    public static void push(int d){
+	        
+	        if(d>=max()){
+	            maxValues.push(d);
+	        }
+	        s2.push(d);
+	    }
+	    
+	    public static void pop(){
+	        int value = s2.pop();
+	        if(value == max()){
+	            maxValues.pop();
+	        }
+	    }
+	    
+	    public static void main(String[] args)  {
+	     Scanner s = new Scanner(System.in);
+             int n = s.nextInt();
+	        for(int i=0;i<n;i++){
+	            int no = s.nextInt();
+                    
+	            if(no == 1){
+	            	int num = s.nextInt();
+	                push(num);
+	            }
+	            else if(no == 2){
+	                pop();
+	            }
+	            else if(no ==3){
+	            	System.out.println(max());
+                    }
+	        }  
+	    }
 }
