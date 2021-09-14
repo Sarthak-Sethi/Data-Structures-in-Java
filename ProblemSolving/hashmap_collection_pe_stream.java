@@ -12,6 +12,7 @@ public class hashmap_collection_pe_stream {
       
 		//System.out.println(set);
       System.out.println(7/2);
+      System.out.println();
 		
 	}
 	 public static boolean isIsomorphic(String s, String t) {
